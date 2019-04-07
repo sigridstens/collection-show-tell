@@ -1,7 +1,7 @@
 //Collection of couch POJOs
 
 var myCouchCollection = new Vue({
-    el: "#house",
+    el: "#couchGallery",
     data: {
         couches: [
             {   name: "Grandma's Couch",

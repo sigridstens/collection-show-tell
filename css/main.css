@@ -1,1 +1,52 @@
+/* General Styles */
+body {
+    max-width: 80em;
+    margin: 4em auto;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
 
+img {
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 4em;
+}
+
+h1 {
+    font-family: 'Rammetto One', cursive;
+    font-size: 3em;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+header p {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Couch Gallery Section */
+#couchGallery {
+    padding: 2em 1.5em;
+    background-image: linear-gradient(to top, rgba(13,30,63,0.9), rgba(13,30,63,0.2));
+    display: flex;
+}
+
+#couchGallery figure {
+    margin: 2em;
+    flex: 1;
+}
+
+/*For smaller screens*/
+@media screen and (max-width: 1200px ){
+    #couchGallery {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
