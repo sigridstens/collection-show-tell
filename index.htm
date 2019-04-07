@@ -13,20 +13,41 @@
         <p>Three couches and counting! With one more already a twinkle in my eye.</p>
     </header>
 
-    <main id="mainSection" v-cloak>
-        <figure v-for="couches in collection">
-            <img v-bind:src="couches.imgRoute" v-bind:alt="couches.name">
-            <figcaption>
-                <ul>
-                    <li id="couch-title">{{couches.name}}</li>
-                    <li>Color: {{couches.color}}</li>
-                    <li>{{couches.age}} years old</li>
-                    <li>This couch has a squishy factor of {{couches.squishyFactor}} out of 10</li>
-                    <li v-if="couches.booPurchased===true">I bought this couch.</li>
-                    <li v-else>This couch was free.</li>
-                </ul>
-            </figcaption>
-        </figure>
+    <main>
+        <table id="mainSection" v-cloak>
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Name</th>
+                    <th>Squishy Factor</th>
+                    <th>Color</th>
+                    <th>Did I buy it?</th>
+                    <th class="final-column">Age</th>
+                </tr>
+            </thead>
+
+            <tbody v-for="couches in collection">
+                <tr>
+                    <td id="picture">
+                        <img v-bind:src="couches.imgRoute" v-bind:alt="couches.name">
+                    </td>
+                    <td>{{couches.name}}</td>
+                    <td>{{couches.squishyFactor}}</td>
+                    <td>{{couches.color}}</td>
+                    <td>{{couches.booPurchased}}</td>
+                    <td class="final-column">{{couches.age}}</td>
+                </tr>
+
+            </tbody>
+                <!--<ul>-->
+                    <!--<li id="couch-title">{{couches.name}}</li>-->
+                    <!--<li>Color: {{couches.color}}</li>-->
+                    <!--<li>{{couches.age}} years old</li>-->
+                    <!--<li>This couch has a squishy factor of {{couches.squishyFactor}} out of 10</li>-->
+                    <!--<li v-if="couches.booPurchased===true">I bought this couch.</li>-->
+                    <!--<li v-else>This couch was free.</li>-->
+                <!--</ul>-->
+        </table>
 
             <!--<figure>-->
                 <!--<img src="img/kevin-couch.jpg" alt="Grandma's Couch">-->
