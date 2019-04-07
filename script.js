@@ -1,14 +1,14 @@
 //Collection of couch POJOs
-
-var myCouchCollection = new Vue({
-    el: "#couchGallery",
+new Vue({
+    el: "#main-section",
     data: {
-        couches: [
+        collection: [
             {   name: "Grandma's Couch",
                 squishyFactor: 7,
                 color: "leaf green",
                 purchased: false,
-                age: 50
+                age: 50,
+                imgRoute: "src:img/grandmacouch.jpg"
             },
 
             {   name: "Kevin's Couch",
