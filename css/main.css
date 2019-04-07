@@ -6,6 +6,7 @@ body {
     background-size: cover;
     color: white;
     font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: .05em;
 }
 
 img {
@@ -38,7 +39,7 @@ table {
 }
 
 thead {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 td, th {
@@ -48,8 +49,7 @@ td, th {
 }
 
 td {
-    font-size: 1.1em;
-    letter-spacing: .05em;
+    font-size: 1.25em;
 }
 
 #picture {
