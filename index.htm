@@ -4,8 +4,7 @@
       <title>Show & Tell</title>
       <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
       <link href="css/main.css" rel="stylesheet" type="text/css"/>
-      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-      <script src="script.js"></script>
+
   </head>
 
   <body>
@@ -14,12 +13,20 @@
         <p>Three couches and counting! With one more already a twinkle in my eye.</p>
     </header>
 
-    <main class="main-section">
-        <div id="couchGallery" v-cloak>
-            <div v-for="couches in collection">
-                <img v-attr="couches.imgRoute" alt="Grandma's Couch">
-                <p>{{couches.name}}</p>
-            </div>
+    <main id="mainSection" v-cloak>
+        <figure v-for="couches in collection">
+            <img v-bind:src="couches.imgRoute" v-bind:alt="couches.name">
+            <figcaption>
+                <ul>
+                    <li id="couch-title">{{couches.name}}</li>
+                    <li>Color: {{couches.color}}</li>
+                    <li>{{couches.age}} years old</li>
+                    <li>This couch has a squishy factor of {{couches.squishyFactor}} out of 10</li>
+                    <li v-if="couches.booPurchased===true">I bought this couch.</li>
+                    <li v-else>This couch was free.</li>
+                </ul>
+            </figcaption>
+        </figure>
 
             <!--<figure>-->
                 <!--<img src="img/kevin-couch.jpg" alt="Grandma's Couch">-->
@@ -31,8 +38,9 @@
                 <!--<figcaption></figcaption>-->
             <!--</figure>-->
 
-         </div>
-
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
   </body>
 </html>

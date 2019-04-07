@@ -31,22 +31,46 @@ header p {
 }
 
 /* Couch Gallery Section */
-#couchGallery {
+#mainSection {
     padding: 2em 1.5em;
-    background-image: linear-gradient(to top, rgba(13,30,63,0.9), rgba(13,30,63,0.2));
+    background-image: linear-gradient(to top, rgba(13,30,63,0.9), rgba(13,30,63,0.4));
     display: flex;
+    flex-flow: row wrap;
 }
 
-#couchGallery figure {
+#mainSection figure {
     margin: 2em;
-    flex: 1;
+    flex-basis: 44.75%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0.25em;
+}
+
+li {
+    padding: .25em;
+    font-size: 1.2em;
+}
+
+#couch-title {
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 /*For smaller screens*/
 @media screen and (max-width: 1200px ){
-    #couchGallery {
+    header {
+        width:80%;
+        margin: 4em auto;
+    }
+    #mainSection {
         display: block;
         width: 80%;
         margin: auto;
+    }
+
+    li {
+        text-align: center;
     }
 }

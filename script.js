@@ -1,34 +1,38 @@
 //Collection of couch POJOs
 new Vue({
-    el: "#main-section",
+    el: "#mainSection",
     data: {
         collection: [
             {   name: "Grandma's Couch",
                 squishyFactor: 7,
                 color: "leaf green",
-                purchased: false,
+                booPurchased: false,
                 age: 50,
-                imgRoute: "src:img/grandmacouch.jpg"
+                imgRoute: "img/grandmacouch.jpg"
             },
 
             {   name: "Kevin's Couch",
                 squishyFactor: 11,
                 color: "camel",
-                purchased: false,
-                age: 25
+                booPurchased: false,
+                age: 25,
+                imgRoute: "img/kevin-couch.jpg"
             },
 
             {   name: "Porch Couch",
                 squishyFactor: 8,
                 color: "olive",
-                purchased: true,
-                age: 50
+                booPurchased: true,
+                age: 50,
+                imgRoute: "img/porch-couch.jpg"
             },
 
             {   name: "Future Deck Couch",
                 squishyFactor: 3,
                 color: "TBD",
-                age: -1
+                age: -1,
+                imgRoute: "https://i.pinimg.com/originals/4b/18/d5/4b18d577913fddacf32268e456287427.jpg"
+
             }
         ]
     }
