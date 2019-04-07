@@ -30,6 +30,7 @@ new Vue({
             {   name: "Future Deck Couch",
                 squishyFactor: 3,
                 color: "TBD",
+                booPurchased: null,
                 age: -1,
                 imgRoute: "https://i.pinimg.com/originals/4b/18/d5/4b18d577913fddacf32268e456287427.jpg"
 

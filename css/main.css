@@ -34,7 +34,7 @@ header p {
 /* Couch Gallery Section */
 table {
     text-align: center;
-    background-color: rgba(13,30,63,0.9);
+    background-color: rgba(13, 30, 63, 0.9);
 }
 
 thead {
@@ -60,48 +60,13 @@ td {
     border-right: none;
 }
 
+.futureCouch {
+    color: orangered;
+}
 
-/* Couch Gallery Section */
-/*#mainSection {*/
-    /*padding: 2em 1.5em;*/
-    /*background-image: linear-gradient(to top, rgba(13,30,63,0.9), rgba(13,30,63,0.4));*/
-    /*display: flex;*/
-    /*flex-flow: row wrap;*/
-/*}*/
-
-/*#mainSection figure {*/
-    /*margin: 2em;*/
-    /*flex-basis: 44.75%;*/
-/*}*/
-
-/*ul {*/
-    /*list-style-type: none;*/
-    /*padding-left: 0.25em;*/
-/*}*/
-
-/*li {*/
-    /*padding: .25em;*/
-    /*font-size: 1.2em;*/
-/*}*/
-
-/*#couch-title {*/
-    /*font-weight: bold;*/
-    /*font-size: 1.5em;*/
-/*}*/
-
-/*!*For smaller screens*!*/
-/*@media screen and (max-width: 1200px ){*/
-    /*header {*/
-        /*width:80%;*/
-        /*margin: 4em auto;*/
-    /*}*/
-    /*#mainSection {*/
-        /*display: block;*/
-        /*width: 80%;*/
-        /*margin: auto;*/
-    /*}*/
-
-    /*li {*/
-        /*text-align: center;*/
-    /*}*/
-/*}*/
+div.futureCouch {
+    background-color: #0D1E3F;
+    padding: .5em 0;
+    text-align: center;
+    width: 100%;
+}

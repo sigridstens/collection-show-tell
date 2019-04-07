@@ -27,7 +27,7 @@
             </thead>
 
             <tbody v-for="couches in collection">
-                <tr>
+            <tr v-bind:class="{futureCouch: couches.booPurchased === null}">
                     <td id="picture">
                         <img v-bind:src="couches.imgRoute" v-bind:alt="couches.name">
                     </td>
@@ -37,28 +37,12 @@
                     <td>{{couches.booPurchased}}</td>
                     <td class="final-column">{{couches.age}}</td>
                 </tr>
-
             </tbody>
-                <!--<ul>-->
-                    <!--<li id="couch-title">{{couches.name}}</li>-->
-                    <!--<li>Color: {{couches.color}}</li>-->
-                    <!--<li>{{couches.age}} years old</li>-->
-                    <!--<li>This couch has a squishy factor of {{couches.squishyFactor}} out of 10</li>-->
-                    <!--<li v-if="couches.booPurchased===true">I bought this couch.</li>-->
-                    <!--<li v-else>This couch was free.</li>-->
-                <!--</ul>-->
         </table>
 
-            <!--<figure>-->
-                <!--<img src="img/kevin-couch.jpg" alt="Grandma's Couch">-->
-                <!--<figcaption></figcaption>-->
-            <!--</figure>-->
-
-            <!--<figure>-->
-                <!--<img src="img/porch-couch.jpg" alt="Grandma's Couch">-->
-                <!--<figcaption></figcaption>-->
-            <!--</figure>-->
-
+        <div class="futureCouch">
+            <p>Couches with orange text are still imaginary.</p>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
