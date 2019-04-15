@@ -33,7 +33,7 @@ header p {
 }
 
 /* Couch Gallery Section */
-table {
+table, #addCouch {
     text-align: center;
     background-color: rgba(13, 30, 63, 0.9);
 }
@@ -69,4 +69,35 @@ div.futureCouch {
     padding: .5em 0;
     text-align: center;
     width: 100%;
+}
+
+label, form p {
+    margin: 1em 0;
+}
+
+label {
+    display: block;
+}
+
+.radio {
+    display: inline;
+    margin-right: 1em;
+}
+
+#addCouch {
+    margin: 0 auto;
+
+}
+
+form {
+    margin: 1em 0 1em 50%;
+    transform: translateX(-42%);
+    padding: 2em;
+    text-align: left;
+    width: fit-content;
+}
+
+button {
+    padding: .75em;
+    margin-left: 1.5em;
 }
