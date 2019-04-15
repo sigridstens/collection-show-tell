@@ -10,7 +10,7 @@
   <body>
     <header>
         <h1>Sigrid's (growing) Couch Collection</h1>
-        <p>Three couches and counting! With one more already a twinkle in my eye.</p>
+        <p>Three couch and counting! With one more already a twinkle in my eye.</p>
     </header>
 
     <main>
@@ -22,20 +22,24 @@
                     <th>Squishy Factor</th>
                     <th>Color</th>
                     <th>Did I buy it?</th>
-                    <th class="final-column">Age</th>
+                    <th>Age</th>
                 </tr>
             </thead>
 
-            <tbody v-for="couches in collection">
-            <tr v-bind:class="{futureCouch: couches.booPurchased === null}">
+            <tbody v-for="couch in collection">
+            <tr v-bind:class="{futureCouch: couch.booPurchased === null}">
                     <td id="picture">
-                        <img v-bind:src="couches.imgRoute" v-bind:alt="couches.name">
+                        <img v-bind:src="couch.imgRoute" v-bind:alt="couch.name">
                     </td>
-                    <td>{{couches.name}}</td>
-                    <td>{{couches.squishyFactor}}</td>
-                    <td>{{couches.color}}</td>
-                    <td>{{couches.booPurchased}}</td>
-                    <td class="final-column">{{couches.age}}</td>
+                    <td>{{couch.name}}</td>
+                    <td>{{couch.squishyFactor}}</td>
+                    <td>{{couch.color}}</td>
+                    <td>{{couch.booPurchased}}</td>
+                    <td>{{couch.age}}</td>
+                    <td class="final-column">
+                        <button type="button" v-on:click="deleteCouch(couch)">delete</button>
+                    </td>
+
                 </tr>
             </tbody>
         </table>
