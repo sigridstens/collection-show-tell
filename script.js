@@ -6,9 +6,33 @@ new Vue({
             this.collection = this.collection.filter(function (couch){
                 return couch.id !== couchObject.id;
             })
+        },
+
+        addCouch: function() {
+            if (this.nameInput !== "") {
+                let newCouch = {
+                    name: this.nameInput,
+                    squishyFactor: this.squishyFactorInput,
+                    color: this.colorInput,
+                    booPurchased: this.booPurchasedInput,
+                    age: this.ageInput,
+                    imgRoute: this.imgRouteInput,
+                    id: this.collection.length + 1
+                };
+                this.collection.push(newCouch);
+                this.nameInput = this.squishyFactorInput = this.colorInput = this.booPurchasedInput = this.ageInput = this.imgRouteInput = "";
+            }
         }
     },
     data: {
+        nameInput: "",
+        squishyFactorInput: "",
+        colorInput: "",
+        booPurchasedInput: "",
+        ageInput: "",
+        imgRouteInput: "",
+        idInput: "",
+
         collection: [
             {   name: "Grandma's Couch",
                 squishyFactor: 7,

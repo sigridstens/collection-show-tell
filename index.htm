@@ -13,8 +13,8 @@
         <p>Three couch and counting! With one more already a twinkle in my eye.</p>
     </header>
 
-    <main>
-        <table id="mainSection" v-cloak>
+    <main id="mainSection" v-cloak>
+        <table>
             <thead>
                 <tr>
                     <th>Picture</th>
@@ -37,7 +37,7 @@
                     <td>{{couch.booPurchased}}</td>
                     <td>{{couch.age}}</td>
                     <td class="final-column">
-                        <button type="button" v-on:click="deleteCouch(couch)">delete</button>
+                        <button type="button" v-on:click="deleteCouch(couch)" id="deleteButton">delete</button>
                     </td>
                 </tr>
             </tbody>
@@ -51,31 +51,30 @@
             <form>
                 <h2>Add a couch to the collection!</h2>
                 <label for="name"> Name of Couch
-                    <input type="text" id="name">
+                    <input type="text" id="name" v-model="nameInput">
                 </label>
 
                 <label for="squishyFactor"> How Squishy is it on a scale from 1 - 10?
-                    <input type="number" id="squishyFactor" maxlength="2">
+                    <input type="number" id="squishyFactor" maxlength="2" v-model="squishyFactorInput">
                 </label>
 
                 <label for="color"> What color is it?
-                    <input type="text" id="color">
+                    <input type="text" id="color" v-model="colorInput">
                 </label>
 
-                <p>Did I pay cold hard cash for this couch?</p>
-                <label class="radio" for="booPurchasedTrue"> Yes
-                    <input type="radio" id="booPurchasedTrue">
-                </label>
-
-                <label class="radio" for="booPurchasedFalse"> No way
-                    <input type="radio" id="booPurchasedFalse">
+                <label class="radio" for="booPurchasedTrue"> Did I pay cold hard cash for this couch?
+                    <input type="checkbox" id="booPurchasedTrue" v-model="booPurchasedInput">
                 </label>
 
                 <label for="age"> How many years old is it?
-                    <input type="number" id="age">
+                    <input type="number" id="age" v-model="ageInput">
                 </label>
 
-                <button type="button">Add to Collection</button>
+                <label for="imgRoute"> Include a url to an image of the couch:
+                    <input type="text" id="imgRoute" v-model="imgRouteInput">
+                </label>
+
+                <button type="button" v-on:click="addCouch()">Add to Collection</button>
             </form>
         </div>
     </main>
