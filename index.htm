@@ -13,7 +13,7 @@
         <p>Three couch and counting! With one more already a twinkle in my eye.</p>
     </header>
 
-    <main id="mainSection" v-cloak>
+    <main>
         <table>
             <thead>
                 <tr>
@@ -26,20 +26,8 @@
                 </tr>
             </thead>
 
-            <tbody v-for="couch in collection">
-            <tr v-bind:class="{futureCouch: couch.booPurchased === null}">
-                    <td id="picture">
-                        <img v-bind:src="couch.imgRoute" v-bind:alt="couch.name">
-                    </td>
-                    <td>{{couch.name}}</td>
-                    <td>{{couch.squishyFactor}}</td>
-                    <td>{{couch.color}}</td>
-                    <td>{{couch.booPurchased}}</td>
-                    <td>{{couch.age}}</td>
-                    <td class="final-column">
-                        <button type="button" v-on:click="deleteCouch(couch)" id="deleteButton">delete</button>
-                    </td>
-                </tr>
+            <tbody id="mainSection" v-cloak>
+                <couch-component is="couch-component" v-for="couch in collection" v-bind:key="couch.id" v-bind:couch="couch"></couch-component>
             </tbody>
         </table>
 

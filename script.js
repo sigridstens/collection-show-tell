@@ -1,4 +1,21 @@
 //Collection of couch POJOs
+Vue.component ('couch-component', {
+    props: ['couch'],
+    template: `
+        <tr  v-bind:class="{futureCouch: couch.booPurchased === null}">
+            <td id="picture">
+                <img v-bind:src="couch.imgRoute" v-bind:alt="couch.name"></td>
+            <td>{{couch.name}}</td>
+            <td>{{couch.squishyFactor}}</td>
+            <td>{{couch.color}}</td>
+            <td>{{couch.booPurchased}}</td>
+            <td class="final-column">{{couch.age}}</td>
+        </tr>
+    `,
+    data: function() {
+        return {collection: []}
+    }
+})
 
 new Vue({
     el: "#mainSection",
