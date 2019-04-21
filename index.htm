@@ -13,7 +13,7 @@
         <p>Three couch and counting! With one more already a twinkle in my eye.</p>
     </header>
 
-    <main>
+    <main id="mainSection" v-cloak>
         <table>
             <thead>
                 <tr>
@@ -26,8 +26,10 @@
                 </tr>
             </thead>
 
-            <tbody id="mainSection" v-cloak>
-                <couch-component is="couch-component" v-for="couch in collection" v-bind:key="couch.id" v-bind:couch="couch"></couch-component>
+            <tbody>
+                <template>
+                    <couch-component is="couch-component" v-for="couch in collection" v-bind:key="couch.id" v-bind:couch="couch"></couch-component>
+                </template>
             </tbody>
         </table>
 

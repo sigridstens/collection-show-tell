@@ -20,12 +20,6 @@ Vue.component ('couch-component', {
 new Vue({
     el: "#mainSection",
     methods: {
-        deleteCouch: function (couchObject) {
-            this.collection = this.collection.filter(function (couch){
-                return couch.id !== couchObject.id;
-            })
-        },
-
         addCouch: function() {
             if (this.nameInput !== "") {
                 let newCouch = {
