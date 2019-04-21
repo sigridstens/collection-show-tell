@@ -1,4 +1,5 @@
 //Collection of couch POJOs
+
 new Vue({
     el: "#mainSection",
     methods: {
